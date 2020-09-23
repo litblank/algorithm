@@ -1,4 +1,4 @@
-package com.litblank.array;
+package com.litblank.array.simple;
 
 import java.util.ArrayList;
 import java.util.List;

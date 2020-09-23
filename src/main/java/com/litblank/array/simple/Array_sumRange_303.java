@@ -1,4 +1,4 @@
-package com.litblank.array;
+package com.litblank.array.simple;
 
 /**
  * 区域和检索 - 数组不可变

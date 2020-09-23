@@ -1,7 +1,4 @@
-package com.litblank.array;
-
-import java.util.Arrays;
-import java.util.LinkedList;
+package com.litblank.array.simple;
 
 /**
  *
