@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  */
 
-public class AQSLock {
+public class ReentrantLock_Condition {
 
     private ReentrantLock reentrantLock=new ReentrantLock();
     private Condition cdA = reentrantLock.newCondition();
@@ -25,7 +25,7 @@ public class AQSLock {
     }
 
     public static void main(String[] args) {
-        AQSLock aqs=new AQSLock();
+        ReentrantLock_Condition aqs=new ReentrantLock_Condition();
         while (turn>0) {
             aqs.threadC();
             aqs.threadB();
@@ -47,6 +47,8 @@ public class AQSLock {
                 System.out.println("");
                 flag=2;
                 cdB.signal();
+                System.out.println("Asignal");
+                Thread.sleep(1000);
             }catch (Exception e){
             }finally {
                 reentrantLock.unlock();
@@ -67,6 +69,7 @@ public class AQSLock {
                 System.out.println("");
                 flag=3;
                 cdC.signal();
+                System.out.println("Bsignal");
             }catch (Exception e){
             }finally {
                 reentrantLock.unlock();
@@ -88,6 +91,7 @@ public class AQSLock {
                 System.out.println("");
                 flag=1;
                 cdA.signal();
+                System.out.println("Csignal");
             }catch (Exception e){
             }finally {
                 reentrantLock.unlock();

@@ -1,0 +1,21 @@
+server:
+  port: 9039
+spring:
+  profiles:
+    active: dev
+##logging
+logging:
+  config: classpath:logback-spring.xml
+  file: xyy-saas-remote-physician-ms
+
+spring:
+  redis:
+    host: db2-saas-test.redis.ybm100.top
+    password: LeQp10w4swa76Ies
+    port: 30001
+    timeout: 10000
+    pool:
+      max-active: 8
+      max-idle: 8
+      min-idle: 0
+      max-wait: -1
