@@ -27,7 +27,7 @@ public class Thread_Pool {
 
         ThreadPoolExecutor threadPoolExecutor=new ThreadPoolExecutor(
                 0,
-                1,
+                5,
                 60,
                 TimeUnit.MILLISECONDS,
                 new SynchronousQueue<>(),
@@ -38,7 +38,8 @@ public class Thread_Pool {
 
             @Override
             protected void beforeExecute(Thread t, Runnable r) {
-//                System.out.println("开始线程");
+                System.out.println("开始线程"+t.getName());
+
             }
 
             @Override

@@ -8,6 +8,9 @@ import java.util.concurrent.locks.ReentrantLock;
  * BBBB
  * CCCCCC
  *
+ *
+ * condition实现 AbstractQueuedSynchronizer -> 内部类 ConditionObject 中存储等待唤醒的线程
+ *
  */
 
 public class ReentrantLock_Condition {
